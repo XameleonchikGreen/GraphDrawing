@@ -1,11 +1,14 @@
+import java.awt.*;
 import java.util.ArrayList;
 
 public class Graph {
 
     private ArrayList <Node> nodes;
+    private ArrayList <Edge> edges;
 
     public Graph(){
         this.nodes = new ArrayList <Node>();
+        this.edges = new ArrayList <Edge>();
     }
 
     public void setNodes(ArrayList<Node> nodes) {
@@ -35,6 +38,7 @@ public class Graph {
     public void addEdge(Node node1, Node node2){
         node1.addNeighbour(node2);
         node2.addNeighbour(node1);
+        this.edges.add(new Edge(node1, node2));
     }
 
     public void addEdge(String name1, String name2) throws RuntimeException{
@@ -47,9 +51,15 @@ public class Graph {
         if(node1 != null && node2 != null){
             node1.addNeighbour(node2);
             node2.addNeighbour(node1);
+            this.edges.add(new Edge(node1, node2));
         }
         else{
             throw new RuntimeException("Names are not correct!");
         }
+    }
+
+    public void draw(Graphics2D g2d, int rad){
+        for(Edge e : this.edges) e.draw(g2d);
+        for(Node n : this.nodes) n.draw(g2d, rad);
     }
 }

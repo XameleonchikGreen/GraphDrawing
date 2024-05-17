@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.ArrayList;
 
 public class Node {
@@ -68,5 +69,15 @@ public class Node {
         else {
             throw new RuntimeException("This node can't be neighbour of itself");
         }
+    }
+
+    public void draw(Graphics2D g2d, int rad){
+
+        g2d.setColor(Color.CYAN);
+        g2d.fillOval(this.x - rad, this.y - rad, 2*rad, 2*rad);
+
+        g2d.setColor(Color.BLUE);
+        g2d.drawOval(this.x - rad, this.y - rad, 2*rad, 2*rad);
+
     }
 }
