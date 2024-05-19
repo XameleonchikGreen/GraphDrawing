@@ -10,10 +10,11 @@ public class Edge {
         this.finnish = b;
     }
 
-    public void draw(Graphics2D g2d){
+    public void draw(Graphics2D g2d, int sizeX, int sizeY){
 
         g2d.setColor(Color.BLACK);
-        g2d.drawLine(this.start.getX(), this.start.getX(), this.finnish.getX(), this.finnish.getY());
+        g2d.drawLine(sizeX + this.start.getX(), sizeY - this.start.getY(),
+                sizeX + this.finnish.getX(), sizeY - this.finnish.getY());
 
     }
 }

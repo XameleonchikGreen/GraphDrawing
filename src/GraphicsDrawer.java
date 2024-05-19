@@ -18,6 +18,6 @@ public class GraphicsDrawer extends JFrame {
         Graphics2D g2d = (Graphics2D) g;
         g2d.setColor(Color.WHITE);
         g2d.fillRect(0, 0, getWidth(), getHeight());
-        Gr.draw(g2d, 10);
+        Gr.draw(g2d, 10, getWidth() / 2, getHeight() / 2);
     }
 }
