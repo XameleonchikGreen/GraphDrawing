@@ -11,13 +11,13 @@ public class Test {
 
         a.setX(50);
         a.setY(50);
-        b.setX(100);
-        b.setY(100);
-        c.setX(200);
-        c.setY(400);
+        b.setX(0);
+        b.setY(0);
+        c.setX(20);
+        c.setY(40);
 
-        G.addEdge("a", "b");
-        G.addEdge(a, c);
+//        G.addEdge("a", "b");
+//        G.addEdge(a, c);
 
         draw(G);
     }
