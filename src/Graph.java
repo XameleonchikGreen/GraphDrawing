@@ -60,7 +60,7 @@ public class Graph {
 
     public void draw(Graphics2D g2d, int rad, int sizeX, int sizeY){
         GraphBalancer.balance(this);
-        for(Edge e : this.edges) e.dGjckraw(g2d, sizeX, sizeY);
+        for(Edge e : this.edges) e.draw(g2d, sizeX, sizeY);
         for(Node n : this.nodes) n.draw(g2d, rad, sizeX, sizeY);
     }
 }
