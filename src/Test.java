@@ -17,11 +17,13 @@ public class Test {
         b.setY(0);
         c.setX(20);
         c.setY(40);
-        d.setX(60);
+        d.setX(120);
         d.setY(-60);
 
-//        G.addEdge("a", "b");
-//        G.addEdge(a, c);
+        G.addEdge("a", "b");
+        G.addEdge(a, c);
+        G.addEdge(b, c);
+        G.addEdge(b, d);
 
         draw(G);
     }
