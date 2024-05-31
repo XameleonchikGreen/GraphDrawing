@@ -10,7 +10,6 @@ public class GraphicsDrawer extends JFrame {
         setTitle("Drawing a Graph");
         setSize(700, 700);
         setVisible(true);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     @Override

@@ -13,10 +13,19 @@ public class Graph {
 
     public void setNodes(ArrayList<Node> nodes) {
         this.nodes = nodes;
+        for(Node n : this.nodes){
+            for(Node n2 : n.getNeighbours()){
+                this.edges.add(new Edge(n, n2));
+            }
+        }
     }
 
     public ArrayList<Node> getNodes() {
         return nodes;
+    }
+
+    public ArrayList<Edge> getEdges() {
+        return edges;
     }
 
     public void addNode(Node newNode) throws RuntimeException{
